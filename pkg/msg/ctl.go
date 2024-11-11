@@ -15,9 +15,8 @@
 package msg
 
 import (
-	"io"
-
 	jsonMsg "github.com/fatedier/golib/msg/json"
+	"io"
 )
 
 type Message = jsonMsg.Message
@@ -27,7 +26,8 @@ var msgCtl *jsonMsg.MsgCtl
 func init() {
 	msgCtl = jsonMsg.NewMsgCtl()
 	for typeByte, msg := range msgTypeMap {
-		msgCtl.RegisterMsg(typeByte, msg)
+		//fmt.Println("typeByte, msg", typeByte, reflect.TypeOf(msg))
+		msgCtl.RegisterMsg(typeByte+1, msg)
 	}
 }
 

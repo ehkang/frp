@@ -1,5 +1,5 @@
-serverAddr = "127.0.0.1"
-serverPort = 7000
+serverAddr = "wx.7soft.cn"
+serverPort = 5173
 
 [[proxies]]
 name = "test-tcp"
